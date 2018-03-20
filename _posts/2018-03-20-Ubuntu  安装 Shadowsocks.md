@@ -1,6 +1,6 @@
 ---
 title: Ubuntu 安装 Shadowsocks
-category: 笔记
+category: skills
 ---
 
 参考链接：[https://github.com/shadowsocks/shadowsocks-qt5/wiki/Installation](https://github.com/shadowsocks/shadowsocks-qt5/wiki/Installation)

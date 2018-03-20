@@ -1,8 +1,9 @@
 ---
 title: Ubuntu 安装最新版 Sublime Text 
-category: 笔记
+category: skills
 ---
 及没有找到有效的OpenPGP解决办法
+
 参考链接：[https://www.sublimetext.com/docs/3/linux_repositories.html](https://www.sublimetext.com/docs/3/linux_repositories.html)
 <!-- more -->
 
