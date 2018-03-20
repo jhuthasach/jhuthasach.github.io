@@ -37,9 +37,9 @@ timezone: Europe/London # Timezone for blog posts and alike
 # 5. Collections
 collections:
   posts:
-    title: Blog # Needed for Siteleaf
+    title: 记事本 # Needed for Siteleaf
     output: true
-    description: "This is just a demo, find out more [about Garth](about)" # The post list page content
+    description: "不要习惯了黑暗就为黑暗辩护；不要为自己的苟且而得意；不要嘲讽那些比自己更勇敢热情的人们。" # The post list page content
 
 # 6. Jekyll collections settings
 defaults:
@@ -58,10 +58,10 @@ defaults:
 
 # 7. Site settings
 encoding: utf-8 # Make sure the encoding is right
-title: "Garth" # Site name or title
+title: "Jhutha Sach" # Site name or title
 logo: "/assets/tongsky.gif" # tongsky.gif XiWinnie.jpg Site logo
 # favicon: "/favicon.ico" # Uncomment to add custom favicon, or leave as is to use site logo
-description: "A stupidly simple theme for Jekyll, using the official Jekyll theme implementation" # Site description and default description
-url: "https://garth.darn.es" # Site url
+description: "我们监守自盗，行贿受贿，无论在报纸、新闻还是讲台上，都谎话连篇，我们一面沉溺于自己的谎言，一面为彼此佩戴奖章。所有人都这么干，从上到下，从下到上。一一雷日科夫" # Site description and default description
+url: "https://jhuthasach.com" # Site url
 baseurl: ""
 lang: en-GB
