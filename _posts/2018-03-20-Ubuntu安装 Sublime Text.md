@@ -5,6 +5,7 @@ category: skills
 及没有找到有效的OpenPGP解决办法
 
 参考链接：[https://www.sublimetext.com/docs/3/linux_repositories.html](https://www.sublimetext.com/docs/3/linux_repositories.html)
+
 <!-- more -->
 
 使用如下方法可以顺利安装，但是打开会提示更新，因此这种方法获得的不是最新版：
@@ -14,7 +15,7 @@ category: skills
 	sudo apt-get install sublime-text-installer
 	sudo apt-get install sublime-text
 
-###安装最新版SublimeText方法（目前版本3143）：
+### 安装最新版SublimeText方法（目前版本3143）：
 
 
 	wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -31,7 +32,7 @@ category: skills
 
 <br><br><br>
 
-###gpg: 找不到有效的 OpenPGP 数据
+### gpg: 找不到有效的 OpenPGP 数据
 第一步时总是出现错误，提示：
 
 	gpg: 找不到有效的 OpenPGP 数据。

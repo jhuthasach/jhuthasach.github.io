@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			<title>Jekyll 本地预览时路径中有中文不能编码无法预览 - Jhutha Sach</title>
+		
+
+		<link rel="stylesheet" href="/assets/styles.css">
+		
+		
+			<link rel="shortcut icon" href="/assets/tongsky.gif">
+		
+		
+	</head>
+	<body>
+
+		<header class="header">
+  <div class="container">
+    <a class="logo" href="/">
+  <img src="/assets/tongsky.gif" alt="Jhutha Sach logo"/>
+</a>
+
+    <nav class="nav">
+  <ul class="list list--nav">
+    
+      
+    
+      
+        <li class="item  item--nav">
+          
+            <a href="/about/">About Garth</a>
+      		
+        </li>
+      
+    
+      
+        <li class="item  item--nav">
+          
+      			
+      			<a href="/">记事本</a>
+      		
+        </li>
+      
+    
+      
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+
+<main class="main  container">
+
+	<article class="article  article--post  content  typeset">
+
+    <h1>Jekyll 本地预览时路径中有中文不能编码无法预览</h1>
+		
+
+<small class="small  post-meta">
+  
+    
+      <span class="label  label--category">skills</span>
+    
+  &nbsp;&middot;&nbsp;<time datetime="2018-03-21T00:00:00+00:00" class="time">21 Mar 2018</time>
+</small>
+
+    <p>参考链接:<a href="http://blog.csdn.net/yinaoxiong/article/details/54025482">http://blog.csdn.net/yinaoxiong/article/details/54025482</a></p>
+
+<p>在Ubuntu下使用Jekyll serve命令本地预览时，发现打不开文章的链接，命令行提示encoding error：</p>
+
+<!-- more -->
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>incompatible character encodings: UTF-8 and ASCII-8BIT
+</code></pre></div></div>
+
+<p>但是推送到GitHub上可以在网站打开。
+##解决办法如下:</p>
+
+<p>在Ruby的安装目录找到 filehandler.rb 文件，我这里的具体路径是：计算机/usr/lib/ruby/2.3.0/webrick/httpservlet</p>
+
+<p>找到下列两处，添加中间的句子：</p>
+
+<p>1.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>path = req.path_info.dup.force_encoding(Encoding.find("filesystem"))
++ path.force_encoding("UTF-8") # 加入编码
+if trailing_pathsep?(req.path_info)
+</code></pre></div></div>
+
+<p>2.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>break if base == "/"
++ base.force_encoding("UTF-8") #加入編碼
+break unless File.directory?(File.expand_path(res.filename + base))
+</code></pre></div></div>
+
+<p>保存重新运行jekyll serve即可在本地预览。</p>
+
+<h3 id="权限不够不能修改此文件">权限不够不能修改此文件？</h3>
+<p><a href="">Ubuntu 下修改文件读写权限</a></p>
+
+
+
+  </article>
+
+</main>
+
+<footer class="footer">
+  <div class="container">    
+    <div class="copyright  typeset">
+      <small class="small">&copy; Jhutha Sach 2018</small>
+    </div>
+  </div>
+</footer>
+
+
+
+		<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700|Neuton:400,700" rel="stylesheet">
+	</body>
+</html>
