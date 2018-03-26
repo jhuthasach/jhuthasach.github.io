@@ -48,3 +48,6 @@ Google了好多办法似乎都没有什么用，忘了看了哪里的方法，�
 	
 	wget http://download.sublimetext.com/sublimehq-pub.gpg
 成功！
+
+
+## 2018.3.26 更新：在Ubuntu17.10.1 上使用官方给的方法后，瞬间添加成功，没有遇到任何问题。
