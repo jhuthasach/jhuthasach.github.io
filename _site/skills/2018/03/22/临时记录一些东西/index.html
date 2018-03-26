@@ -68,13 +68,32 @@
 </small>
 
     <!-- more -->
-<p>生成SSH密钥：ssh-keygen</p>
+<p>生成SSH密钥：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ssh-keygen
+</code></pre></div>
+
+<p>git配置帐号：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git config --global user.email "email@example.com"
+git config --global user.name "yourname"
+</code></pre></div>
 
 <p>避免git push 时输入帐号密码，git clone 时使用ssh方式或者改变remote：</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote rm origin  
+<div class="highlighter-rouge"><pre class="highlight"><code>git remote rm origin  
 git remote add origin git@github.com:jhuthasach/jhuthasach.github.io.git
-</code></pre></div></div>
+</code></pre></div>
+
+<p>jupyter notebook 使用时出现如下错误：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>jupyter attributeerror: type object 'ioloop' has no attribute 'initialized'
+</code></pre></div>
+
+<p>我找到的解决办法：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo pip install --upgrade pyzmq
+</code></pre></div>
 
 
   </article>

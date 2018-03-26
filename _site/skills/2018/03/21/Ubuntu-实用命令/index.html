@@ -70,11 +70,36 @@
     <p>分享一些我使用过的一些很实用的命令，希望对你有用。</p>
 
 <!-- more -->
-<h4 id="修改文件读写权限">修改文件读写权限</h4>
-<p>在所在目录打开命令行：</p>
+<p>修改文件读写权限</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chmod 666 文件名   变成可读写
-</code></pre></div></div>
+<div class="highlighter-rouge"><pre class="highlight"><code>chmod u+x 文件名  给文件加上可执行权限，然后在Python代码前加上：
+#!/usr/bin/python 这样以后就可以直接运行 ：
+./file.py
+sudo chmod 666 文件名   变成可读写
+</code></pre></div>
+
+<p>文件操作：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mkdir folder
+touch file
+cp file folder/
+mv file folder/
+rm -r folder
+
+cat t.py &gt; t1.py  把t.py东西复制到t1.py
+cat t.py t1.py &gt;  t2.py  把前两个打包放到t2
+cat t3 &gt;&gt; t2.py 把t3内容加到t2后面
+
+ls -l 可以查看文件打权限
+</code></pre></div>
+
+<p>Ubuntu鼠标变成X（十字），启动器消失，右键菜单没有打开终端选项的解决办法：	
+	Ctrl+Alt+F1 打开类似命令行的窗口：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get update  
+sudo apt-get install --reinstall ubuntu-desktop  
+sudo apt-get install unity 
+</code></pre></div>
 
 
   </article>
