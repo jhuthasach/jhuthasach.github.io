@@ -109,9 +109,19 @@ git remote add origin git@github.com:jhuthasach/jhuthasach.github.io.git
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ruby-full ruby-bundler   安装ruby
 sudo gem install jekyll   安装Jekyll
-bundle install   使用新主题时需要执行，否则可能无法正常本地预览
+bundle install   使用新主题时需要执行，否则可能无法正常本地预览    
 </code></pre></div></div>
 
+<p>Ubuntu 17.10.1 安装 openssh-server 时报错：<a href="https://blog.csdn.net/yuanxiang01/article/details/79235089">参考链接</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>有未满足的依赖关系：
+。。。。。。依赖openssh-client(=版本号）
+
+解决办法：   
+
+安装对应的openssh-client版本号后再次尝试即可成功：
+sudo apt-get install openssh-client=版本号
+</code></pre></div></div>
 
 
   </article>
