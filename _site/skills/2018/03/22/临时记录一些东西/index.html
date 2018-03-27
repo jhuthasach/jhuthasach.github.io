@@ -45,6 +45,8 @@
     
       
     
+      
+    
   </ul>
 </nav>
 
@@ -121,6 +123,16 @@ bundle install   使用新主题时需要执行，否则可能无法正常本地
 
 安装对应的openssh-client版本号后再次尝试即可成功：
 sudo apt-get install openssh-client=版本号
+</code></pre></div></div>
+
+<p>Windows(PuTTY) 和 Android(JuiceSSH) 通过SSH控制 Ubuntu 时 无法连接：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>在VirtualBox中使用Ubuntu时如果你虚拟机网络用：
+网络地址转换(NAT)
+则 ifconfig 得到的 inet 地址 以 10开头，Windows和Android上面的应用都连接不上
+此时需要把网络换为：
+桥接网卡
+此时得到的地址192开头，可连接。
 </code></pre></div></div>
 
 

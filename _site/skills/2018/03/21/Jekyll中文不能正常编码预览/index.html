@@ -45,6 +45,8 @@
     
       
     
+      
+    
   </ul>
 </nav>
 
@@ -67,16 +69,17 @@
   &nbsp;&middot;&nbsp;<time datetime="2018-03-21T00:00:00+00:00" class="time">21 Mar 2018</time>
 </small>
 
-    <p>参考链接:<a href="http://blog.csdn.net/yinaoxiong/article/details/54025482">http://blog.csdn.net/yinaoxiong/article/details/54025482</a></p>
+    <p>参考链接:<a href="http://blog.csdn.net/yinaoxiong/article/details/54025482">http://blog.csdn.net/yinaoxiong/article/details/54025482</a>
+<!-- more --></p>
 
 <p>在Ubuntu下使用Jekyll serve命令本地预览时，发现打不开文章的链接，命令行提示encoding error：</p>
 
-<!-- more -->
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>incompatible character encodings: UTF-8 and ASCII-8BIT
 </code></pre></div></div>
 
-<p>但是推送到GitHub上可以在网站打开。
-##解决办法如下:</p>
+<p>但是推送到GitHub上可以在网站打开。</p>
+
+<h2 id="解决办法如下">解决办法如下:</h2>
 
 <p>在Ruby的安装目录找到 filehandler.rb 文件，我这里的具体路径是：计算机/usr/lib/ruby/2.3.0/webrick/httpservlet</p>
 

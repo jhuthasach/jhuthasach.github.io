@@ -3,7 +3,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-			<title>Ubuntu 安装 Shadowsocks - Jhutha Sach</title>
+			<title>Ubuntu 中将默认的 python 版本由 2 改为 3 - Jhutha Sach</title>
 		
 
 		<link rel="stylesheet" href="/assets/styles.css">
@@ -58,7 +58,7 @@
 
 	<article class="article  article--post  content  typeset">
 
-    <h1>Ubuntu 安装 Shadowsocks</h1>
+    <h1>Ubuntu 中将默认的 python 版本由 2 改为 3</h1>
 		
 
 <small class="small  post-meta">
@@ -66,22 +66,25 @@
     
       <span class="label  label--category">skills</span>
     
-  &nbsp;&middot;&nbsp;<time datetime="2018-03-20T00:00:00+00:00" class="time">20 Mar 2018</time>
+  &nbsp;&middot;&nbsp;<time datetime="2018-03-27T00:00:00+01:00" class="time">27 Mar 2018</time>
 </small>
 
-    <p>参考链接：<a href="https://github.com/shadowsocks/shadowsocks-qt5/wiki/Installation">https://github.com/shadowsocks/shadowsocks-qt5/wiki/Installation</a></p>
+    <p>参考链接: <a href="https://www.jianshu.com/p/9d3033d1b26f">https://www.jianshu.com/p/9d3033d1b26f</a>
+<!-- more --></p>
 
-<!-- more -->
+<p>现在的Ubuntu 中在终端中输入<code class="highlighter-rouge">python</code>，进入的是python 2的交互环境，输入<code class="highlighter-rouge">python3</code>进入的是python 3 交互环境。这里是我找到的解决办法：</p>
 
-<ol>
-  <li>下载 <a href="https://github.com/shadowsocks/shadowsocks-qt5/releases">AppImage</a> 文件。</li>
-  <li>在AppImage文件所在目录打开终端。</li>
-  <li><code class="highlighter-rouge">chmod a+x 文件全名</code></li>
-  <li><code class="highlighter-rouge">./文件全名</code>    （点，斜杠）</li>
-  <li>以后就可以直接双击这个文件打开Shadowsocks客户端</li>
-  <li>火狐浏览器安装SwitchyOmega插件，在代理协议处选择：SOCKS5，代理服务器填127.0.0.1，代理端口填1080，保存就可以了。</li>
-  <li>如果不安装SwitchyOmega的话，可以直接在火狐浏览器设置里选择网络代理，手动代理配置，socks主机，127.0.0.1，1080，确定。</li>
-</ol>
+<p>环境：VirtualBox， Ubuntu 17.10.1</p>
+
+<p>我用到的命令：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm /usr/bin/python
+ln -s /usr/bin/python3.6 /usr/bin/python
+</code></pre></div></div>
+
+<p>注：原博<code class="highlighter-rouge">usr</code>拼错</p>
+
+<h3 id="重要提示删除python-2-可能会导致ubuntu默认的输入法无法使用">重要提示：删除python 2 可能会导致Ubuntu默认的输入法无法使用。</h3>
 
 
 
