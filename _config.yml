@@ -24,7 +24,7 @@ plugins:
 - jekyll-paginate
 
 # 3. Gem settings
-paginate: 3 # jekyll-paginate > items per page
+paginate: 10 # jekyll-paginate > items per page
 paginate_path: page:num # jekyll-paginate > blog page
 
 # 4. Jekyll settings
@@ -59,7 +59,7 @@ defaults:
 # 7. Site settings
 encoding: utf-8 # Make sure the encoding is right
 title: "Jhutha Sach" # Site name or title
-logo: "/assets/tongsky.gif" # tongsky.gif XiWinnie.jpg Site logo
+logo: "/assets/shiba.jpg" # tongsky.gif XiWinnie.jpg Site logo
 # favicon: "/favicon.ico" # Uncomment to add custom favicon, or leave as is to use site logo
 description: "我们监守自盗，行贿受贿，无论在报纸、新闻还是讲台上，都谎话连篇，我们一面沉溺于自己的谎言，一面为彼此佩戴奖章。所有人都这么干，从上到下，从下到上。一一雷日科夫" # Site description and default description
 url: "https://jhuthasach.com" # Site url
